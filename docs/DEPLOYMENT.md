@@ -1,4 +1,3 @@
-```markdown
 # Deployment guide (AWS)
 
 1. Prerequisites
@@ -17,4 +16,3 @@
    - Run migrations using your migration tool (example with psql):
      - pg_dump -Fc $DATABASE_URL > /backups/db-pre-migration.dump
      - Run migration script in `backend/migrations/`
-```

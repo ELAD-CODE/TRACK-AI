@@ -59,6 +59,6 @@ jobs:
         run: |
           # build and sync to a staging S3 bucket or deploy to EB/ECS as configured
           npm run build
-          aws s3 sync ./public s3://${{ secrets.S3_BUCKET }}/ --acl public-read
+          aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }}/ --acl public-read
         env:
           NODE_ENV: staging

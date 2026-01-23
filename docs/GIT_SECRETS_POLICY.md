@@ -1,4 +1,3 @@
-```markdown
 # Git Secrets Policy & Remediation
 
 - Never commit secrets to the repository.
@@ -14,4 +13,3 @@ If a secret is found in the repo:
 
 Automated detection:
 - CI runs gitleaks and will block merges if potential secrets are detected.
-```
