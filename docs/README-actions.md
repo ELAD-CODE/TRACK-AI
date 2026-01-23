@@ -1,4 +1,3 @@
-```markdown
 # GitHub Actions - Setup
 
 Required repository secrets:
@@ -15,4 +14,3 @@ Required repository secrets:
 Add these under Settings -> Secrets -> Actions.
 
 The CI workflow runs gitleaks; any detected secret will fail the job.
-```
