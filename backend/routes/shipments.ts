@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { body, validationResult } from 'express-validator';
 import { Shipment } from '../models/shipment';
 
@@ -13,7 +13,7 @@ const shipmentValidation = [
   // other validations...
 ];
 
-router.post('/', shipmentValidation, async (req, res) => {
+router.post('/', shipmentValidation, async (req: Request, res: Response) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
 
@@ -23,7 +23,7 @@ router.post('/', shipmentValidation, async (req, res) => {
   res.status(201).json({ ok: true, shipment: payload });
 });
 
-router.put('/:id', shipmentValidation, async (req, res) => {
+router.put('/:id', shipmentValidation, async (req: Request, res: Response) => {
   // similar validation and update flow
   res.json({ ok: true });
 });
